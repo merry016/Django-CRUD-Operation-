@@ -1,0 +1,7 @@
+<h2>Confirm Deletion</h2>
+<p>Are you sure you want to delete Detail of {{ delt.StartupName }}?</p>
+
+<form method="post" action="">
+    {% csrf_token %}
+    <button type="submit">Yes, delete it</button>
+</form>

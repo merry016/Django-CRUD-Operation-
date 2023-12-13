@@ -1,0 +1,77 @@
+<!--{{startup_detail.StartupName}}<br/>
+{{startup_detail.firm}}<br/>
+{{startup_detail.Description}}<br/>
+{{startup_detail.Address}}<br/>
+{{startup_detail.email}}<br/>
+{{startup_detail.socialmedialink}}<br/>
+{{startup_detail.Funding_Status}}<br/>-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6p8eW5gF/XF1nJqzBZUn5V6hFci+YfYb" crossorigin="anonymous">
+    <title>Startup Details</title>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+        .outer-card {
+            background-color: #96A8EC;
+            border: none;
+        }
+        .description-box {
+            background-color: #B6C1EB;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5 d-flex justify-content-center align-items-center" style="min-height: 100vh">
+    <div class="card outer-card">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">Details of {{ startup_detail.StartupName }}</h2>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Startup Name</dt></br>
+                <dd class="col-sm-9 description-box">{{ startup_detail.StartupName }}</dd></br>
+
+                <dt class="col-sm-3">Description</dt></br>
+                <dd class="col-sm-9 description-box">{{ startup_detail.Description }}</dd></br>
+
+                <dt class="col-sm-3">Firm</dt></br>
+                <dd class="col-sm-9 description-box">{{ startup_detail.firm }}</dd></br>
+
+                <dt class="col-sm-3">Email</dt></br>
+                <dd class="col-sm-9 description-box">{{ startup_detail.email }}</dd></br>
+
+                <dt class="col-sm-3">Address</dt></br>
+                <dd class="col-sm-9 description-box">{{ startup_detail.Address }}</dd></br>
+
+                <dt class="col-sm-3">Social Media Link</dt></br>
+                <dd class="col-sm-9 description-box">{{ startup_detail.socialmedialink }}</dd></br>
+
+                <dt class="col-sm-3">Funding Status</dt></br>
+                <dd class="col-sm-9 description-box">{{ startup_detail.Funding_Status }}</dd></br>
+            </dl>
+            <a href="{%url 'startapp'%}">Back to List</a>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
